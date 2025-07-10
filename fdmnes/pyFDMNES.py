@@ -307,16 +307,16 @@ class fdmnes(object):
         self.fdmnes_exe = fdmnes_path
         fdmnes_bin = os.path.basename(fdmnes_path)
 
-        for fname in [fdmnes_bin]:
-            fpath = os.path.join(self.fdmnes_dir, fname)
-            if not os.path.isfile(fpath):
-                raise ValueError(
-                    """
-                        File %s not found in %s
+        # for fname in [fdmnes_bin]:
+        #     fpath = os.path.join(self.fdmnes_dir, fname)
+        #     if not os.path.isfile(fpath):
+        #         raise ValueError(
+        #             """
+        #                 File %s not found in %s
 
-                        Have you entered a valid path in %s?
-                        It must point on the fdmnes executable.
-                    """%(fname, self.fdmnes_dir, conffile))
+        #                 Have you entered a valid path in %s?
+        #                 It must point on the fdmnes executable.
+        #             """%(fname, self.fdmnes_dir, conffile))
 
         fpath = os.path.join(self.fdmnes_dir, "spacegroup.txt")
         if not os.path.isfile(fpath):
