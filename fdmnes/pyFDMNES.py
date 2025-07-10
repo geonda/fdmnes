@@ -650,7 +650,7 @@ class fdmnes(object):
         else:
             base_out = basename + suffix
 
-        path_out = os.path.join(dirname, base_out)
+        path_out =  base_out
 
         output = ["Filout"] if not convonly else ["Conv_out"]
         output.append(path_out + ".txt"*convonly)
